@@ -1,0 +1,51 @@
+###
+GET http://127.0.0.1:5002/api HTTP/1.1
+
+
+### 
+POST http://localhost:5005/webhooks/rest/webhook HTTP/1.1
+Content-Type: application/json
+
+{
+  "sender": "test_user", 
+  "message": "Hi there!"
+}
+
+###
+POST http://127.0.0.1:5000/api?robotId=b2eed1fbef744cacb7a01c1501431fd2 HTTP/1.1
+Content-Type: application/json
+
+{ 
+     "spoken": "hi", 
+     "rawSpoken": "@me 你好",
+     "receivedName": "仑哥",
+     "groupName": "测试群1",
+     "groupRemark": "测试群1备注名",
+     "roomType": 1,
+     "sender_id": true,
+     "prompt": 1
+}
+
+###
+POST http://127.0.0.1:5005/webhooks/rest/webhook HTTP/1.1
+Content-Type: application/json
+
+{
+  "sender": "test_user", 
+  "message": "sad"
+}
+
+###
+POST http://127.0.0.1:5000/robotchat?robotId=b2eed1fbef744cacb7a01c1501431fd21 HTTP/1.1
+Content-Type: application/json
+
+{ 
+     "spoken": "起诉状如何写？", 
+     "rawSpoken": "@me 你好",
+     "receivedName": "Paladin",
+     "groupName": "客户群1_test1",
+     "groupRemark": "客户群1_test1",
+     "roomType": 1,
+     "atMe": true,
+     "textType": 1
+}

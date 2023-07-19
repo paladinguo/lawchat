@@ -1,0 +1,10 @@
+rasa==3.6.0
+rasa-sdk==3.6.0
+transformers==4.30.2
+jieba==0.42.1
+mitie==0.7.0
+Flask==2.2.2
+langchain==0.0.190
+chromadb==0.3.26
+unstructured==0.7.8
+

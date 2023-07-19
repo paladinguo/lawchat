@@ -1,0 +1,25 @@
+version: "3.1"
+
+
+# stories:
+# - story: 用户问候接待
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+# - story: 用户请求法律文书写作帮助
+#   steps:
+#   - intent: request_legal_assistance
+#   - action: utter_recommend_link
+
+# - story: 用户请求和律师沟通
+#   steps:
+#   - intent: talk_to_lawyer
+#   - action: utter_lawyer_contact
+
+# - story: 用户询问你是谁
+#   steps:
+#   - intent: who_are_you
+#   - action: utter_who_am_i
+
+  

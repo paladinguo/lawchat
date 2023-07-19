@@ -1,0 +1,37 @@
+version: "3.1"
+
+rules:
+- rule: 用户请求法律文书写作帮助
+  steps:
+  - intent: request_legal_assistance
+  - action: utter_recommend_link
+
+- rule: 用户请求和律师沟通
+  steps:
+  - intent: talk_to_lawyer
+  - action: utter_lawyer_contact
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_fallback_gpt
+  
+- rule: 用户询问你是谁
+  steps:
+  - intent: who_are_you
+  - action: action_fallback_gpt
+
+- rule: 用户问候接待
+  steps:
+  - intent: greet
+  - action: action_fallback_gpt
+
+# - rule: 其他情况fullback
+#   steps:
+#   - intent: out_of_scope
+#   - action: action_fallback_gpt
+  
+# - rule: Assign chitchat intent
+#   steps:
+#   - intent: "*"
+#   - action: action_default_fallback

@@ -1,0 +1,34 @@
+version: '3.1'
+
+intents:
+- greet
+- who_are_you
+- request_legal_assistance
+- talk_to_lawyer
+- nlu_fallback
+
+actions:
+
+- utter_recommend_link
+- utter_lawyer_contact
+# - utter_who_am_i
+- action_fallback_gpt
+
+responses:
+  # utter_greet:
+  # - text: 你好！我是AI数字律师包晴天，请问有什么我可以帮助你的吗？
+  utter_recommend_link:
+  - text: |-
+      这是一些法律文书写作的有用链接：
+      1. #公众号:快法 能够提供免费法律文书代写、网上立案的帮助。
+      2. [中国裁判文书网](https://wenshu.court.gov.cn/)
+  utter_lawyer_contact:
+  - text: 你可以拨打我们律所的电话号码：15011991188，与我们的律师取得联系或访问公众号#公众号:快法。
+  # utter_who_am_i:
+  # - text: 我是AI数字律师包晴天，如果您有法律文书写作、法律问题咨询、网上立案、找律师帮打官司等问题，可以和我聊聊。
+  utter_default:
+  - text: 抱歉，我无法理解你的问题，请再说一遍。
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
